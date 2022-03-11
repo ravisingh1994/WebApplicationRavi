@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model WebApplicationRavi.Models.Employee
+@Html.TextBoxFor(m => m.Name)
+@Html.TextBoxFor(m => m.age)
+@Html.TextBoxFor(m => m.Salary)
+
+<h1>@Session["Name"]</h1>
+<ul>
+    @foreach(object obj in(List<String>)Session["slist"])
+            {
+               <ol>@obj</ol>
+            }
+</ul>
